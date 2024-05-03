@@ -6,10 +6,13 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 export default function DropDown(props) {
+  // UseSTate HOok
   const [age, setAge] = React.useState("");
 
+  // handleChange Function
   const handleChange = (event) => {
     setAge(event.target.value);
+    props.onChange(event.target.value); // Call onChange function passed via props
   };
 
   return (
